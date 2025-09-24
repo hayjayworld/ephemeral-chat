@@ -28,5 +28,5 @@ A privacy-first, real-time temporary chat app where chats disappear when everyon
 
 1. **Clone and setup**:
 ```bash
-git clone <repository-url>
+git clone <https://github.com/hayjayworld/ephemeral-chat>
 cd ephemeral-chat
