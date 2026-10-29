@@ -8,7 +8,7 @@ function App() {
 
   const handleCreateRoom = async (username) => {
     try {
-      const response = await fetch('http://localhost:3001/api/create-room', {
+      const response = await fetch('https://ephemeral-chat-f89j.onrender.com/api/create-room', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
