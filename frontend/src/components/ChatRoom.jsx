@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import MessageList from './MessageList';
 import { useSocket } from '../hooks/useSocket';
+import { BACKEND_URL } from '../config';
 
 const ChatRoom = ({ roomId, username, onLeave }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [users, setUsers] = useState([]);
-  const { socket, isConnected } = useSocket('http://localhost:3001');
+  const { socket, isConnected } = useSocket(BACKEND_URL);
 
   useEffect(() => {
     if (!socket) return;

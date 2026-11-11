@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import UsernameForm from './components/UsernameForm';
 import ChatRoom from './components/ChatRoom';
+import { BACKEND_URL } from './config';
 
 function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home' or 'chat'
@@ -8,7 +9,7 @@ function App() {
 
   const handleCreateRoom = async (username) => {
     try {
-      const response = await fetch('https://ephemeral-chat-f89j.onrender.com/api/create-room', {
+      const response = await fetch(`${BACKEND_URL}/api/create-room`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
